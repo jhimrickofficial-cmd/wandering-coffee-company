@@ -558,12 +558,16 @@
     }
 
     .hero-content {
-      position: relative;
-      z-index: 2;
-      width: 100%;
-      padding-top: clamp(155px,19vh,220px);
-      padding-bottom: clamp(130px,17vh,195px);
-    }
+  position: relative;
+  z-index: 2;
+  width: min(
+    calc(100% - var(--page-gutter) * 2),
+    var(--content-max)
+  );
+  margin-inline: auto;
+  padding-top: clamp(155px, 19vh, 220px);
+  padding-bottom: clamp(130px, 17vh, 195px);
+}
 
     .hero-eyebrow {
       color: #e8d6c1;
